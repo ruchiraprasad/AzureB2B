@@ -3,3 +3,6 @@
 ################################################################################
 
 /AzureB2BAuthServer/.vs/AzureB2BAuthServer/v15
+/AzureB2BAuthServer/AzureB2BAuthServer/bin/roslyn
+/AzureB2BAuthServer/AzureB2BAuthServer/bin
+/AzureB2BAuthServer/AzureB2BAuthServer/obj/Debug

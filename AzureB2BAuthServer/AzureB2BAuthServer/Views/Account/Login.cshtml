@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+<form method="POST" action="/Account/External?@Request.QueryString">
+    <input type="submit" name="submit.External.OpenIdConnect" value="Azure Active Directory B2B" class="btn btn-default login-btn" style="width: 250px; margin-top:10px;">
+</form>
+

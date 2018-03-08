@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Authorize";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var authentication = Context.GetOwinContext().Authentication;
+    var ticket = authentication.AuthenticateAsync("Application").Result;
+    var identity = ticket != null ? ticket.Identity : null;
+    var scopes = (Request.QueryString.Get("scope") ?? "").Split(' ');
+}
+
+
+<h2>Authorize</h2>
+
+<div class="container body-content">
+    <div class="main-container zoomIn animated">
+
+        <div class="row" style="height: 600px;">
+            <div class="col-md-5">
+                <section id="loginForm" style="margin-top: 50px; padding: 25px; width: 350px;">
+                    <form method="POST">
+                        <div class="form-horizontal">
+                            <h4 style="font-size: 32px;line-height: 35px;max-width: 300px;overflow: hidden;text-overflow: ellipsis;">
+                                Hello, @identity.Name
+                            </h4>
+                            <div style="color: #b6b7af; font-size: 13px;">
+                                A third party application want to do the following on your behalf:
+                            </div>
+                            <hr>
+
+                            <div class="form-group" style="margin-bottom: 0px; margin-top: 25px; margin-bottom:15px;">
+
+                                <div class="col-md-10">
+                                    <ul>
+                                        @foreach (var scope in scopes)
+                                        {
+                                            <li>@scope</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    <input type="submit" name="submit.Grant" value="Grant" class="btn btn-default login-btn" style="width:90px" />
+                                    <hr />
+                                    <input type="submit" name="submit.Login" value="Sign in as different user" class="btn btn-default login-btn" style="width: 230px;
+    background-color: #e9e9e9;
+    color: #000;" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </section>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

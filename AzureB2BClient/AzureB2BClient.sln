@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureB2BClientWebApp", "AzureB2BClientWebApp\AzureB2BClientWebApp.csproj", "{226A91D1-7CB1-4F36-918E-E6556AAB861F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{226A91D1-7CB1-4F36-918E-E6556AAB861F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226A91D1-7CB1-4F36-918E-E6556AAB861F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226A91D1-7CB1-4F36-918E-E6556AAB861F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226A91D1-7CB1-4F36-918E-E6556AAB861F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2425386D-C9AA-4609-A115-B6F8EC76A344}
+	EndGlobalSection
+EndGlobal

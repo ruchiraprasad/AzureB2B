@@ -6,3 +6,5 @@
 /AzureB2BAuthServer/AzureB2BAuthServer/bin/roslyn
 /AzureB2BAuthServer/AzureB2BAuthServer/bin
 /AzureB2BAuthServer/AzureB2BAuthServer/obj/Debug
+/AzureB2BClient/.vs/AzureB2BClient/v15/Server/sqlite3
+/AzureB2BClient/AzureB2BClientWebApp/bin/roslyn

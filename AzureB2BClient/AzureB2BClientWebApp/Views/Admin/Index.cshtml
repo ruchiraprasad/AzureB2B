@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Claims From Auth Server</h2>
+
+<br />
+<input type="button" class="btn btn-info" value="Sign out" onclick="location.href='@Url.Action("SignOut", "Admin")'" />
+<br />
+<br />
+<table>
+    <tr>
+        <td style="font-weight:bold; width:75%">Claim Id</td>
+        <td style="font-weight:bold; width:25%">Value</td>
+    </tr>
+    @foreach (var item in Model.Claims)
+    {
+        <tr>
+            <td>@item.Type</td>
+            <td>@item.Value</td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="login-overlay" class="modal-dialog" style="left:auto;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Login to @Request.Url.ToString()</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="well">
+                        <form id="form1" action="@ViewBag.Action" method="POST">
+                            <p class="help-block">Login with your Organization Account</p>
+                            <br />
+                            <input id="Authorize" type="submit" class="btn btn-success btn-block" name="submit.Authorize" value="Login" />
+                            <a href="#" class="btn btn-default btn-block">Help to login</a>
+                            <br />
+                            <br />
+                            <br />
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <p class="lead">Don't have access! <span class="text-success">Request Access now</span></p>
+                    <ul class="list-unstyled" style="line-height: 2">
+                        <li><span class="fa fa-check text-success"></span> To use the same login</li>
+                        <li><span class="fa fa-check text-success"></span> To use your own credentials</li>
+                        <li><span class="fa fa-check text-success"></span> Safe login with Azure AD</li>
+                        <li><a href="#"><u>Read more</u></a></li>
+                    </ul>
+                    <p><a href="https://focus-ad-b2badmin.azurewebsites.net/" class="btn btn-info btn-block">Request Access Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
